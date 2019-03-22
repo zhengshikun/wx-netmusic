@@ -1,0 +1,31 @@
+<!--pages/playlist/playlist.wxml-->
+<view class="pages">
+    <view class="play-img">
+        <image class="img-bg" src="{{grids[0].coverImgUrl}}" />
+        <view class="img-head">
+            <image src="{{grids[0].coverImgUrl}}" />
+        </view>
+        <view class="img-content">
+            <text class="content1">{{grids[0].name}}</text>
+            <text class="content2">{{grids[0].copywriter}}</text>
+        </view>
+    </view>
+    <view class="play-content">
+        <navigator url="" hover-class="none">
+            <view class="content-title">
+                <text>全部歌单</text>
+                <image src="../../images/arrowright.png" mode="aspectFill" />
+            </view>
+        </navigator>
+        <view class="content-grids">
+            <block wx:for="{{grids}}" wx:key="index">
+                <navigator url="../playlistdetails/playlistdetails?id={{item.id}}" class="board-grid" hover-class="navigator-hover">
+                    <view class="grid-bg">
+                        <image class="bg-img" src="{{item.coverImgUrl}}" />
+                    </view>
+                    <text class="grid-label">{{item.name}}</text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

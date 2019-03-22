@@ -1,0 +1,24 @@
+<!--pages/songlist/songlist.wxml-->
+<view class="pages">
+    <view class="song-img">
+        <image class="img-bg" src="../../images/闪之轨迹.png" />
+        <view class="img-icon">
+            <image src="../../images/songlist.png" />
+        </view>
+    </view>
+    <view class="song-lists">
+        <block wx:for="{{songlist}}" wx:key="index">
+            <view class="lists-list" src="{{src}}">
+                <view class="list-img">
+                    <image src="{{item.song.album.picUrl}}" />
+                </view>
+                <view class="list-name">{{item.name}}</view>
+                <view class="list-more">
+                    <view class="more-btn">
+                        <image src="../../images/more.png" />
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

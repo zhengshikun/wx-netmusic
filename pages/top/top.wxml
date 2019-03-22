@@ -1,0 +1,30 @@
+<!--pages/top/top.wxml-->
+<view class="pages">
+    <view class="top-official">
+        <view class="top-item">官方榜</view>
+        <navigator url="../topdetails/topdetails?idx={{index}}" class="official-list" wx:for="{{oflists}}" wx:key="index">
+            <view class="official-img">
+                <image src="{{item.coverImgUrl}}" />
+            </view>
+            <view class="official-content">
+                <text class="">1.{{item.tracks[0].name}}</text>
+                <text class="">2.{{item.tracks[1].name}}</text>
+                <text class="">3.{{item.tracks[2].name}}</text>
+            </view>
+        </navigator>
+
+    </view>
+    <view class="top-global">
+        <view class="top-item">全球榜</view>
+        <view class="global-lists">
+            <navigator url="../topdetails/topdetails?idx={{index+5}}" class="global-list" wx:for="{{gllists}}" wx:key="index">
+            <view class="global-img">
+                <image src="{{item.coverImgUrl}}" />
+            </view>
+            <view class="global-content">
+                <text class="">{{item.name}}</text>
+            </view>
+        </navigator>
+        </view>
+    </view>
+</view>

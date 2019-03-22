@@ -1,0 +1,4 @@
+<!--pages/playlistdetails/playlistdetails.wxml-->
+<import src="../template/playlist-details.wxml"></import>
+
+<template is="details" data="{{...item}}"></template>

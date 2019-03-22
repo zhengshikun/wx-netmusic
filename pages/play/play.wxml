@@ -1,0 +1,29 @@
+<!--pages/play/play.wxml-->
+<view class="pages">
+    <view class="bg">
+        <image class="bg-img" src="{{picurl}}" />
+    </view>
+    <view class="record">
+        <image id="{{recordIndex}}" class="record-img {{rotate==recordIndex?'record-rotate':''}}" src="{{picurl}}" />
+    </view>
+    <view src="{{src}}" id="myAudio" class="audio">
+        <view class="audio-slider">
+            <slider bindchange="sliderchange" min="{{min}}" max="{{max}}" block-size="20" show-value activeColor="#D43C33"
+                value="{{value}}" />
+        </view>
+        <view class="audio-btns">
+            <view class="audio-btn" bindtap="lower">
+                <image src="../../images/lower.png" />
+            </view>
+            <view class="audio-btn" type="" wx:if="{{isplay==false}}" bindtap="play">
+                <image src="../../images/play.png" />
+            </view>
+            <view class="audio-btn" type="" wx:if="{{isplay==true}}" bindtap="stop">
+                <image src="../../images/stop.png" />
+            </view>
+            <view class="audio-btn" bindtap="upper">
+                <image src="../../images/upper.png" />
+            </view>
+        </view>
+    </view>
+</view>

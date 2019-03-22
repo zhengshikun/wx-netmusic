@@ -1,0 +1,55 @@
+<template name="details">
+    <view class="play-img">
+        <image class="img-bg" src="{{coverImgUrl}}" />
+        <view class="img-head">
+            <image src="{{coverImgUrl}}" />
+        </view>
+        <view class="img-content">
+            <view class="content1">{{name}}</view>
+            <scroll-view scroll-y='true' class="content2">{{description}}</scroll-view>
+        </view>
+    </view>
+    <view class="song-lists">
+        <block wx:for="{{tracks}}" wx:key="index">
+            <view data-picurl="{{item.al.picUrl}}" id="{{item.id}}" class="lists-list" src="{{musicSrc}}" bindtap="playMusic">
+                <view class="list-img">
+                    <image src="{{item.al.picUrl}}" />
+                </view>
+                <view class="list-name">{{item.al.name}}</view>
+                <view class="list-more">
+                    <view data-id="{{item.id}}" class="more-btn" catchtap="moreBtn">
+                        <image src="../../images/more.png" />
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</template>
+
+<template name="topdetails">
+    <view class="play-img">
+        <image class="img-bg" src="{{coverImgUrl}}" />
+        <view class="img-head">
+            <image src="{{coverImgUrl}}" />
+        </view>
+        <view class="img-content">
+            <view class="content1">{{name}}</view>
+            <scroll-view class="content2">{{description}}</scroll-view>
+        </view>
+    </view>
+    <view class="song-lists">
+        <block wx:for="{{tracks}}" wx:key="index">
+            <view data-picurl="{{item.al.picUrl}}" id="{{item.id}}" class="lists-list" src="{{musicSrc}}" bindtap="playMusic">
+                <view class="list-img">
+                    <image src="{{item.al.picUrl}}" />
+                </view>
+                <view class="list-name">{{item.al.name}}</view>
+                <view class="list-more">
+                    <view class="more-btn">
+                        <image src="../../images/more.png" />
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</template>

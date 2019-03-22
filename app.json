@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/recommend/recommend",
+    "pages/playlistdetails/playlistdetails",
+    "pages/playlist/playlist",
+    "pages/play/play",
+    "pages/songlist/songlist",
+    "pages/top/top",
+    "pages/topdetails/topdetails"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#D43C33",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#FBFCFD",
+    "enablePullDownRefresh": true
+  }
+}

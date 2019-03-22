@@ -1,0 +1,2 @@
+/* pages/playlistdetails/playlistdetails.wxss */
+@import "../template/playlist-details.wxss"
